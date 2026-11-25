@@ -3,6 +3,19 @@ function secondHighest(arr) {
         return -Infinity;
     }
 
+    let allSame = true;
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] !== arr[0]) {
+            allSame = false;
+            break;
+        }
+    }
+
+    if (allSame) {
+        return -Infinity;
+    }
+
     let highest = -Infinity;
     let second = -Infinity;
 
